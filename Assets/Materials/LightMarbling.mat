@@ -129,8 +129,8 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _TileSize: 3.22
-    - _WallClimbHeight: 0.13
+    - _TileSize: 1.24
+    - _WallClimbHeight: 0.18
     - _WarblingSpeed: 1
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
