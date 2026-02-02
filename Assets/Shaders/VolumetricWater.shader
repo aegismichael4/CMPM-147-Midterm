@@ -5,12 +5,11 @@ Shader "Custom/VolumetricWater"
         _Color("Color", Color) = (1,1,1,1)
         _MaxDistance("Max Distance", float) = 100
         _StepSize("Step Size", Range(0.1, 20)) = 1
-        _DensityMultiplier("Density Multiplier", Range(0, 10)) = 1
+        _DensityMultiplier("Density Multiplier", Range(0, .5)) = 1
         _NoiseOffset("Noise Offset", float) = 0
 
-        _FogNoise("Fog Noise", 3D) = "white" {}
-        _NoiseTiling("Noise Tiling", float) = 1
-        _DensityThreshold("DensityThreshold", Range(0, 1)) = 0.1
+        [HDR]_LightContribution("Light Contribution", Color) = (1,1,1,1)
+        _LightScattering("Light Scattering", Range(0,1)) = 0.2
     }
 
     SubShader
@@ -23,8 +22,10 @@ Shader "Custom/VolumetricWater"
 
             #pragma vertex Vert
             #pragma fragment frag
+            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "Packages/com.unity.render-pipelines.core/Runtime/Utilities/Blit.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
 
@@ -33,16 +34,21 @@ Shader "Custom/VolumetricWater"
             float _DensityMultiplier;
             float _StepSize;
             float _NoiseOffset;
-            TEXTURE3D(_FogNoise);
-            float _NoiseTiling;
-            float _DensityThreshold;
+            float4 _LightContribution;
+            float _LightScattering;
 
-            float get_density(float3 worldPos)
+            float henyey_greenstein(float angle, float scattering)
             {
-                float4 noise = _FogNoise.SampleLevel(sampler_TrilinearRepeat, worldPos * 0.01 * _NoiseTiling, 0);
-                float density = dot(noise, noise);
-                density = saturate(density - _DensityThreshold) * _DensityMultiplier;
-                return density;
+                return (1.0 - angle * angle) / (4.0 / PI * pow(1.0 + scattering * scattering - (2.0 * scattering) * angle, 1.5f));
+            }
+
+            float2 squareUV(float2 uv) {
+                float width = _ScreenParams.x;
+                float height =_ScreenParams.y;
+                float scale = 1000;
+                float x = uv.x * width;
+                float y = uv.y * height;
+                return float2 (x/scale, y/scale);
             }
 
             half4 frag(Varyings IN) : SV_Target
@@ -58,22 +64,25 @@ Shader "Custom/VolumetricWater"
 
                 float2 pixelCoords = IN.texcoord * _BlitTexture_TexelSize.zw;
                 float distLimit = min(viewLength, _MaxDistance);
-                float distTravelled = InterleavedGradientNoise(pixelCoords, (int)(_Time.y / max(HALF_EPS, unity_DeltaTime.x))) * _NoiseOffset;
+                float distTravelled = InterleavedGradientNoise(pixelCoords, (int)(_Time.y / max(HALF_EPS, unity_DeltaTime.x) * .5)) * _NoiseOffset;
                 float transmittance = 1;
+                float4 fogCol = _Color;
 
                 while(distTravelled < distLimit)
                 {
                     float3 rayPos = entryPoint + rayDir * distTravelled;
-                    float density = get_density(rayPos);
+                    float density = _DensityMultiplier;
 
                     if (density > 0)
                     {
+                        Light mainLight = GetMainLight(TransformWorldToShadowCoord(rayPos));
+                        fogCol.rgb += mainLight.color.rgb * _LightContribution.rgb * henyey_greenstein(dot(rayDir, mainLight.direction), _LightScattering) * density * mainLight.shadowAttenuation * _StepSize;
                         transmittance *= exp(-density * _StepSize);
                     }
                     distTravelled += _StepSize;
                 }
 
-                return lerp(col, _Color, 1 - saturate(transmittance));
+                return lerp(col, fogCol, 1 - saturate(transmittance));
             }
 
             ENDHLSL
