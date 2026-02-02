@@ -118,6 +118,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _MarblingDistortion: 10
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -132,7 +133,7 @@ Material:
     - _StartFade: 1
     - _Surface: 0
     - _TileSize: 0.5
-    - _WallClimbHeight: 0.43
+    - _WallClimbHeight: 0.5
     - _WarblingSpeed: 1
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
@@ -141,7 +142,8 @@ Material:
     - _BaseColor: {r: 0.12967247, g: 0.1739485, b: 0.8867924, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightColor: {r: 0, g: 0.5790825, b: 1.0581417, a: 0.16862746}
+    - _LightColor: {r: 0.014856199, g: 0.18029077, b: 1.1248308, a: 0.32941177}
+    - _ScrollSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TileSize: {r: 0, g: 0, b: 0, a: 0}
     - _TiledUV: {r: 0, g: 0, b: 0, a: 0}
