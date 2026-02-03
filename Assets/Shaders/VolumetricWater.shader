@@ -1,8 +1,14 @@
+/*
+    all credit goes to technically harry on youtube for this shader!! i did not write it!!
+    https://www.youtube.com/watch?v=8P338C9vYEE
+*/
+
 Shader "Custom/VolumetricWater"
 {
     Properties
     {
         _Color("Color", Color) = (1,1,1,1)
+        _MinDistance("Min Distance", float) = 0
         _MaxDistance("Max Distance", float) = 100
         _StepSize("Step Size", Range(0.1, 20)) = 1
         _DensityMultiplier("Density Multiplier", Range(0, .5)) = 1
@@ -31,6 +37,7 @@ Shader "Custom/VolumetricWater"
 
             float4 _Color;
             float _MaxDistance;
+            float _MinDistance;
             float _DensityMultiplier;
             float _StepSize;
             float _NoiseOffset;
@@ -64,7 +71,7 @@ Shader "Custom/VolumetricWater"
 
                 float2 pixelCoords = IN.texcoord * _BlitTexture_TexelSize.zw;
                 float distLimit = min(viewLength, _MaxDistance);
-                float distTravelled = InterleavedGradientNoise(pixelCoords, (int)(_Time.y / max(HALF_EPS, unity_DeltaTime.x) * .5)) * _NoiseOffset;
+                float distTravelled = InterleavedGradientNoise(pixelCoords, (int)(_Time.y / max(HALF_EPS, unity_DeltaTime.x))) * _NoiseOffset + _MinDistance;
                 float transmittance = 1;
                 float4 fogCol = _Color;
 
