@@ -2426,7 +2426,7 @@
     "m_ObjectId": "0eaad73347824588ade3effdc451264b",
     "m_Title": "Wall Climb Alpha",
     "m_Position": {
-        "x": -1562.999755859375,
+        "x": -1563.0001220703125,
         "y": 576.0
     }
 }
@@ -3745,7 +3745,7 @@
     "m_Title": "Distort UV with noise",
     "m_Position": {
         "x": -2753.0,
-        "y": -71.00006103515625
+        "y": -70.99998474121094
     }
 }
 
@@ -3840,8 +3840,8 @@
     "m_ObjectId": "2be01dfc5bf640a2b32efc812b44a79e",
     "m_Title": "Distance Fade",
     "m_Position": {
-        "x": -1508.9998779296875,
-        "y": 1642.0001220703125
+        "x": -1509.0,
+        "y": 1641.9998779296875
     }
 }
 
@@ -6481,7 +6481,7 @@
     "m_Title": "TiledUV",
     "m_Position": {
         "x": -4775.0,
-        "y": -709.0000610351563
+        "y": -709.0
     }
 }
 
@@ -6826,8 +6826,8 @@
     "m_ObjectId": "641778745fef4f80b21ab35ce3508ec4",
     "m_Title": "line texture",
     "m_Position": {
-        "x": -1664.999755859375,
-        "y": -904.0000610351563
+        "x": -1665.0,
+        "y": -904.0
     }
 }
 
@@ -8777,7 +8777,7 @@
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
         "x": 0.0,
-        "y": 20.0
+        "y": 100.0
     },
     "m_SliderType": 0,
     "m_SliderPower": 3.0,
@@ -9853,7 +9853,7 @@
     "m_Title": "Scroll UV with Time",
     "m_Position": {
         "x": -2378.0,
-        "y": 581.0
+        "y": 580.9999389648438
     }
 }
 
@@ -10417,7 +10417,7 @@
     "m_Title": "distort time with noise",
     "m_Position": {
         "x": -2967.0,
-        "y": 916.0
+        "y": 916.0000610351563
     }
 }
 
@@ -11403,7 +11403,7 @@
     "m_ObjectId": "d1d3960b3f2d447b9fb7bd63c28c8a72",
     "m_Title": "scrolling noise",
     "m_Position": {
-        "x": -1743.999755859375,
+        "x": -1744.0,
         "y": -234.99998474121095
     }
 }
@@ -11438,7 +11438,7 @@
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
         "x": 0.0,
-        "y": 20.0
+        "y": 100.0
     },
     "m_SliderType": 0,
     "m_SliderPower": 3.0,

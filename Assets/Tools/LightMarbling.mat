@@ -113,7 +113,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
-    - _EndFade: 13.94
+    - _EndFade: 46.5
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -130,7 +130,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
-    - _StartFade: 4.24
+    - _StartFade: 7.2
     - _Surface: 0
     - _TileSize: 0.388
     - _WallClimbHeight: 0.709
