@@ -414,20 +414,6 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
-                    "m_Id": "3bfcb3ecec1346c3b22ce5067d6393e6"
-                },
-                "m_SlotId": 0
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "a1657ca958894a69bbdc9484b6509d2e"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
                     "m_Id": "3c601c36584d4d6f88d7793294704087"
                 },
                 "m_SlotId": 2
@@ -962,7 +948,7 @@
     "m_Title": "warble intensity",
     "m_Position": {
         "x": -3642.999755859375,
-        "y": 504.0000305175781
+        "y": 504.00006103515627
     }
 }
 
@@ -1434,7 +1420,7 @@
     "m_Title": "base water color",
     "m_Position": {
         "x": -1283.0,
-        "y": 45.0000114440918
+        "y": 45.00004196166992
     }
 }
 
@@ -3453,8 +3439,8 @@
     "m_ObjectId": "8258249cf0d64fca939ce9d3f5c68847",
     "m_Title": "warble speed",
     "m_Position": {
-        "x": -3988.0,
-        "y": -23.999958038330079
+        "x": -3987.999755859375,
+        "y": -23.999950408935548
     }
 }
 
