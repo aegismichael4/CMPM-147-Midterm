@@ -2,6 +2,11 @@
 
 This project contains a small collection of proceedural shaders to provide a customizable, 3D underwater scene.
 
+## Setup
+
+- To use, clone the repo and open with Unity.
+- **Unity Version:** 6000.3.3f1
+
 ## Components
 
  - **Water Light Shader:** This shader uses scrolling noise to provide the visual effect of light shining down through water onto the ocean floor. It can be configured to look like the surface of a liquid if desired though!
