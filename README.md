@@ -17,12 +17,12 @@ This project contains a small collection of proceedural shaders to provide a cus
 ### Water Light Shader (Material called "LightMarbling" in-engine):
 | Parameter | Description |
 | --------- | ----------- |
-| Light Color | The color of the light on the ground |
-| Warbling Speed | The speed that the Voronoi cells jiggle |
+| Marbling Color | The color of the light on the ground |
+| Marbling Speed | The speed that the Voronoi cells jiggle |
 | Marbling Distortion | The strength of the UV distortion on the Voronoi cells |
 | Wall Climb Height | The height that the shader will climb up walls (from it's lowest y coordinate) |
-| Start Fade | The distance from the camera that the shader will start to fade out |
-| End Fade | The distance from the camera that the shader will be completely faded out |
+| Start Fade Out Distance | The distance from the camera that the shader will start to fade out |
+| Max Draw Distance | The distance from the camera that the shader will be completely faded out |
 | Tile Size | The size of each Voronoi Cell |
 | Scroll Speed | The speed that the shader will scroll on the x and z axis |
 
@@ -30,15 +30,24 @@ This project contains a small collection of proceedural shaders to provide a cus
 | Parameter | Description |
 | --------- | ----------- |
 | Color | The color of the fog |
+| Light Contribution | What color the fog picks up when lit by the main light of the scene |
+| Density Multiplier | How dense the fog is |
+| Light Scattering | Heyney-Greenstein light scattering (I don't know either) |
 | Min Distance | The closest to the camera it will start raymarching (probably should be 0) |
 | Max Distance | The furthest from the camera to raymarch |
 | Step Size | How far each ray will move between steps |
-| Density Multiplier | How dense the fog is |
 | Noise Offset | How much to offset the ray's start position based on blue noise (ideally equal to Step Size) |
-| Light Contribution | What color the fog picks up when lit by the main light of the scene |
-| Light Scattering | Heyney-Greenstein light scattering (I don't know either) |
+
+### Water Surface Shader (Material called "WaterSurface" in-engine):
+| Parameter | Description |
+| --------- | ----------- |
+| Water Color | The color of the water itself |
+| Reflection Alpha | The opacity of the planar reflections |
+| Warble Intensity | The intensity of the reflection displacement (appearance of waves) |
+| Warble Speed | The speed of the reflection displacement |
 
 ### Other Things I Adjust to Make Cool Scenes
 - The base material color of the ground (called "Sand" in-engine)
 - The Directional Light GameObject
 - The Global Volume post-processing effects
+- The Water Surface GameObject has parameters for how much the water surface bobs up and down
