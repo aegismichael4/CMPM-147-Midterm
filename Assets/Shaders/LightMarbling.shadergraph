@@ -2291,9 +2291,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -865.0001220703125,
-            "y": 2062.0,
-            "width": 121.0,
+            "x": -889.0000610351563,
+            "y": 2025.000244140625,
+            "width": 170.0,
             "height": 34.0
         }
     },
@@ -2426,8 +2426,8 @@
     "m_ObjectId": "0eaad73347824588ade3effdc451264b",
     "m_Title": "Wall Climb Alpha",
     "m_Position": {
-        "x": -1563.0001220703125,
-        "y": 576.0
+        "x": -1562.9998779296875,
+        "y": 575.9999389648438
     }
 }
 
@@ -2856,7 +2856,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "13dd9cf2ec724c56b64c537cd9e03544",
     "m_Id": 0,
-    "m_DisplayName": "WarblingSpeed",
+    "m_DisplayName": "MarblingSpeed",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -3386,7 +3386,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "20d3bc3f4964413abe620b9e778aaf0c",
     "m_Id": 0,
-    "m_DisplayName": "EndFade",
+    "m_DisplayName": "MaxDrawDistance",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -3744,8 +3744,8 @@
     "m_ObjectId": "2b0032a1660741dface24d4b820b2d7c",
     "m_Title": "Distort UV with noise",
     "m_Position": {
-        "x": -2753.0,
-        "y": -70.99998474121094
+        "x": -2752.999755859375,
+        "y": -70.99994659423828
     }
 }
 
@@ -3840,8 +3840,8 @@
     "m_ObjectId": "2be01dfc5bf640a2b32efc812b44a79e",
     "m_Title": "Distance Fade",
     "m_Position": {
-        "x": -1509.0,
-        "y": 1641.9998779296875
+        "x": -1508.9998779296875,
+        "y": 1624.9998779296875
     }
 }
 
@@ -6429,7 +6429,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "5b65000ec8fa42e9b4b9d72c8cfd60ce",
     "m_Id": 0,
-    "m_DisplayName": "LightColor",
+    "m_DisplayName": "MarblingColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -6480,8 +6480,8 @@
     "m_ObjectId": "5c385274b6da4194b9127806c6254288",
     "m_Title": "TiledUV",
     "m_Position": {
-        "x": -4775.0,
-        "y": -709.0
+        "x": -4774.99951171875,
+        "y": -708.9999389648438
     }
 }
 
@@ -6826,8 +6826,8 @@
     "m_ObjectId": "641778745fef4f80b21ab35ce3508ec4",
     "m_Title": "line texture",
     "m_Position": {
-        "x": -1665.0,
-        "y": -904.0
+        "x": -1664.9998779296875,
+        "y": -903.9999389648438
     }
 }
 
@@ -7263,10 +7263,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -871.0,
-            "y": 1701.0001220703125,
-            "width": 126.9998779296875,
-            "height": 33.9998779296875
+            "x": -928.0000610351563,
+            "y": 1684.0001220703125,
+            "width": 192.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -7328,7 +7328,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "73dd5e7080eb405e96be42a7ab770372",
     "m_Id": 0,
-    "m_DisplayName": "LightColor",
+    "m_DisplayName": "MarblingColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -7608,10 +7608,10 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "WarblingSpeed",
+    "m_Name": "MarblingSpeed",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "WarblingSpeed",
-    "m_DefaultReferenceName": "_WarblingSpeed",
+    "m_RefNameGeneratedByDisplayName": "MarblingSpeed",
+    "m_DefaultReferenceName": "_MarblingSpeed",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -8177,10 +8177,10 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "LightColor",
+    "m_Name": "MarblingColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "LightColor",
-    "m_DefaultReferenceName": "_LightColor",
+    "m_RefNameGeneratedByDisplayName": "MarblingColor",
+    "m_DefaultReferenceName": "_MarblingColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -8757,10 +8757,10 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "StartFade",
+    "m_Name": "StartFadeOutDistance",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "StartFade",
-    "m_DefaultReferenceName": "_StartFade",
+    "m_RefNameGeneratedByDisplayName": "StartFadeOutDistance",
+    "m_DefaultReferenceName": "_StartFadeOutDistance",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -9237,7 +9237,7 @@
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "9c05e4c69c674e9c88814d455466236f",
-    "m_Name": "Adjustable Fields",
+    "m_Name": "Light Marbling",
     "m_ChildObjectList": [
         {
             "m_Id": "88c971e1248d4829a9574d0d9fcb21bb"
@@ -9852,8 +9852,8 @@
     "m_ObjectId": "ab055e6984904109829dbd659c7444a3",
     "m_Title": "Scroll UV with Time",
     "m_Position": {
-        "x": -2378.0,
-        "y": 580.9999389648438
+        "x": -2377.999755859375,
+        "y": 581.0
     }
 }
 
@@ -10416,8 +10416,8 @@
     "m_ObjectId": "b7165ac9f5b348758c3c8f1e868a0281",
     "m_Title": "distort time with noise",
     "m_Position": {
-        "x": -2967.0,
-        "y": 916.0000610351563
+        "x": -2966.999755859375,
+        "y": 915.9999389648438
     }
 }
 
@@ -11403,8 +11403,8 @@
     "m_ObjectId": "d1d3960b3f2d447b9fb7bd63c28c8a72",
     "m_Title": "scrolling noise",
     "m_Position": {
-        "x": -1744.0,
-        "y": -234.99998474121095
+        "x": -1743.9998779296875,
+        "y": -234.99981689453126
     }
 }
 
@@ -11418,10 +11418,10 @@
     "promotedFromAssetID": "",
     "promotedFromCategoryName": "",
     "promotedOrdering": -1,
-    "m_Name": "EndFade",
+    "m_Name": "MaxDrawDistance",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "EndFade",
-    "m_DefaultReferenceName": "_EndFade",
+    "m_RefNameGeneratedByDisplayName": "MaxDrawDistance",
+    "m_DefaultReferenceName": "_MaxDrawDistance",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -13066,7 +13066,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "f44c2e6b189a4ce9bf554705c5d00680",
     "m_Id": 0,
-    "m_DisplayName": "StartFade",
+    "m_DisplayName": "StartFadeOutDistance",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
