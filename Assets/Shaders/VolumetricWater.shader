@@ -7,15 +7,17 @@ Shader "Custom/VolumetricWater"
 {
     Properties
     {
+        [Header(Light)]
         _Color("Color", Color) = (1,1,1,1)
+        [HDR]_LightContribution("Light Contribution", Color) = (1,1,1,1)
+        _DensityMultiplier("Density Multiplier", Range(0, 1)) = 1
+        _LightScattering("Light Scattering", Range(0,1)) = 0.2
+
+        [Header(Ray Marching)]
         _MinDistance("Min Distance", float) = 0
         _MaxDistance("Max Distance", float) = 100
-        _StepSize("Step Size", Range(0.1, 20)) = 1
-        _DensityMultiplier("Density Multiplier", Range(0, .5)) = 1
+        _StepSize("Step Size", float) = 1
         _NoiseOffset("Noise Offset", float) = 0
-
-        [HDR]_LightContribution("Light Contribution", Color) = (1,1,1,1)
-        _LightScattering("Light Scattering", Range(0,1)) = 0.2
     }
 
     SubShader
